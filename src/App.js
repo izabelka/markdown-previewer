@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MarkdownConverter from './MarkdownConverter'
 import './App.css';
 var marked = require('marked');
 
@@ -19,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <input type="text" value={this.state.input} onChange={this.getInput}/>
-        <div>{marked(this.state.input)}</div>
+        <MarkdownConverter currentInput={marked(this.state.input)}/>
       </div>
     );
   }
