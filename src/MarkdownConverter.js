@@ -6,7 +6,7 @@ class MarkdownConverter extends Component {
   render() {
     return (
       <div id="result-container">
-        {(this.props.currentInput)}
+        {this.props.currentInput}
       </div>
     )
   }

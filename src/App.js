@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: ''
+      input: '<div></div>'
     };
     this.getInput = this.getInput.bind(this);
   }
