@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <input type="text" value={this.state.input} onChange={this.getInput}/>
+        <textarea type="text" value={this.state.input} onChange={this.getInput}></textarea>
         <MarkdownConverter currentInput={this.state.input}/>
       </div>
     );
