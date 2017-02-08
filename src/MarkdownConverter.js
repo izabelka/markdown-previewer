@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 var marked = require('marked');
 
 class MarkdownConverter extends Component {
+  createMarkup() {
+    var rawMarkup = marked(this.props.currentInput, {sanitize: true});
+    return { __html: rawMarkup };
+  }
 
   render() {
-    return (
-      <div id="result-container">
-        {this.props.currentInput}
-      </div>
-    )
+    return <div dangerouslySetInnerHTML={this.createMarkup()} />
   }
 }
 
