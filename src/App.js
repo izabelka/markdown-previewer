@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import MarkdownConverter from './MarkdownConverter'
-import './App.css';
+import './styles/App.css';
+import markdownExample from './markdownExample.md';
+import $ from 'jquery';
 
 class App extends Component {
   constructor(props) {
@@ -10,6 +12,15 @@ class App extends Component {
     };
     this.getInput = this.getInput.bind(this);
   }
+
+  componentDidMount() {
+    $.get(markdownExample, function(data) {
+      this.setState({
+        input: data
+      });
+    }.bind(this));
+  }
+
   getInput(event) {
     this.setState({
       input: event.target.value
@@ -17,7 +28,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div id="container">
         <textarea type="text" value={this.state.input} onChange={this.getInput}></textarea>
         <MarkdownConverter currentInput={this.state.input}/>
       </div>

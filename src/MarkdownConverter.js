@@ -8,7 +8,7 @@ class MarkdownConverter extends Component {
   }
 
   render() {
-    return <div dangerouslySetInnerHTML={this.createMarkup()} />
+    return <div id='converted-text' dangerouslySetInnerHTML={this.createMarkup()} />
   }
 }
 
