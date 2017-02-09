@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MarkdownConverter from './MarkdownConverter'
 import './styles/App.css';
-import markdownExample from './markdownExample.md';
+// import markdownExample from './markdownExample.md';
 import $ from 'jquery';
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    $.get(markdownExample, function(data) {
+    $.get('https://raw.githubusercontent.com/izabelka/markdown-previewer/master/src/markdownExample.md', function(data) {
       this.setState({
         input: data
       });
