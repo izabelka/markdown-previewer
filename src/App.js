@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MarkdownConverter from './MarkdownConverter'
 import './styles/App.css';
-// import markdownExample from './markdownExample.md';
 import $ from 'jquery';
 
 class App extends Component {
